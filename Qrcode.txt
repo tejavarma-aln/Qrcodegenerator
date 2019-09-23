@@ -1,0 +1,63 @@
+
+
+[COM Interface:Qrinterface]
+	
+	Project:OpenQrgenerator
+	Class:Class1
+	Interface:GenerateQr
+	Parameter:p1:String:In
+	Return:String
+
+
+[#Form:Comprehensiveinvoice]
+ Add:Parts:At Beginning:Qrcodepart
+	On:Print:Yes:Call:Qrengine
+	
+[System:Formulas]
+	Qraccount:$BankDetails:Ledger:@@VchBankName
+	Qrifsc:$IFSCode:Ledger:@@VchBankName
+	Qrbank:@@VchBankMailingName
+
+	
+[Function:Qrengine]
+	Variable:billamount:String:$$String:$Amount
+	Variable:billnumber:String:$$String:$VoucherNumber
+	Variable:billdate:String:$$String:$Date
+	Variable:billaccount:String:$$String:@@Qraccount
+	Variable:billifsc:String:$$String:@@Qrifsc
+	Variable:billbank:String:$$String:@@Qrbank
+	Variable:Qrdata:String:"Bill no-"+##billnumber +","+"Amount-"+ ##billamount +"," +"Date-" +##billdate + "," +"Bank Ac-"+ ##billaccount +"," +"Ifsc-" + ##billifsc +"," +"Bank-" + ##billbank
+	
+	01:Exec COM Interface:Qrinterface:##Qrdata
+	02:Log:$$LastResult
+
+
+
+[Part:Qrcodepart]
+	Graph Type:"Qrimg.jpg"
+	Height:5
+	Line:Expinvlogo
+	Invisible:Not $globalqrpath:Company:##Svcurrentcompany
+	
+[#Part:CMP TallyShop F11]
+	Add:Part:after:CMP TallyShopFeaturesTitle:Qrcodeconfig
+	
+[Part:Qrcodeconfig]
+	Line:Qrenableconfig
+ 
+[Line:Qrenableconfig]
+	Space Top:0.2
+	Field:MediumPrompt,Qrlogic
+	Local:Field:MediumPrompt:Set as:$$LocaleString:"Enable Qr code?"
+	
+[Field:Qrlogic]
+	Use:Logical Field
+	Set as:No
+	Show Table:Always
+	Storage:globalqrpath
+	
+[System:UDF]
+	globalqrpath:Logical:7895
+	
+ 
+ 
