@@ -4,7 +4,6 @@ Qr Code Generator for Tally
 
 *Download all the file to the tally application folder
 *Register the Dll with the below Steps
-*Change the image path in txt file to the Tally Working directory
 *load the txt file in Tally 
 
 
@@ -19,5 +18,6 @@ it requires .Net framework version 4 in order to install this dll
 
 *Qrcode will be displayed at top left of the invoice
 *customize the tdl as per you need
+* Make sure all the files placed in Tally Working Directory
 
 Thanks..
