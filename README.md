@@ -1,5 +1,5 @@
 # Qrcodegenerator
-Qr Code Generator for Tally
+*********Qr Code Generator for Tally************
 
 
 *Download all the files to the tally application folder
@@ -12,6 +12,7 @@ Qr Code Generator for Tally
 
 
 Steps to Register DLL:
+
 1)Copy file (Qrcodegenerator.dll) to C:\Windows\System32
 
 2)Open Cmd in administrator Mode (Elavated mode)
@@ -27,7 +28,9 @@ you can customise the tdl as per your needs
 it requires .Net framework version 4 in order to install this dll
 
 *Qrcode will be displayed at top left of the invoice
+
 *customize the tdl as per you need
-* Make sure all the files placed in Tally Working Directory
+
+**** Make sure all the files placed in Tally Working Directory
 
 Thanks..
