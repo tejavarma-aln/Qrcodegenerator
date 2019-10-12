@@ -3,11 +3,15 @@ Qr Code Generator for Tally
 
 
 *Download all the file to the tally application folder
+
+
 *Register the Dll with the below Steps
+
+
 *load the txt file in Tally 
 
 
-steps to register dll:
+Steps to Register DLL:
 Copy file (Qrcodegenerator.dll) to C:\Windows\System32
 Open Cmd in administrator Mode (Elavated mode)
 CD C:\Windows\Microsoft.NET\Framework64\v4.0.30319 ;; change directory
