@@ -20,6 +20,12 @@
 
 2)Open Cmd in administrator Mode (Elavated mode)
 
+**if you are using 64bit machine** 
+
+3)CD C:\Windows\Microsoft.NET\Framework64\v4.0.30319 ;; change directory
+
+**if you are using 32bit machine**
+
 3)CD C:\Windows\Microsoft.NET\Framework64\v4.0.30319 ;; change directory
 
 4)Type without quote "regasm Qrcodegenerator.dll /codebase"
