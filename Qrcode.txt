@@ -1,4 +1,4 @@
-
+ 
 
 [COM Interface:Qrinterface]
 	
@@ -9,9 +9,19 @@
 	Return:String
 
 
+[#Report:AccountingVoucher]
+	Local:Form:Default:Add:Button:GenerateQr
+	
+ [Button:GenerateQr]
+	 Title:"Generate QrCode"
+	 Key:ctrl+g
+     Action:Call:Qrengine
+	 Inactive:NOT $$IsSales:$VoucherTypeName
+
+
 [#Form:Comprehensiveinvoice]
- Add:Parts:At Beginning:Qrcodepart
-	On:Print:Yes:Call:Qrengine
+    Add:Parts:At Beginning:Qrcodepart
+	
 	
 [System:Formulas]
 	Qraccount:$BankDetails:Ledger:@@VchBankName
@@ -30,14 +40,14 @@
 	
 	01:Exec COM Interface:Qrinterface:##Qrdata
 	02:Log:$$LastResult
-
-
+	03:Print Report:.:Yes
 
 [Part:Qrcodepart]
 	Graph Type:"Qrimg.jpg"
 	Height:5
 	Line:Expinvlogo
 	Invisible:Not $globalqrpath:Company:##Svcurrentcompany
+	
 	
 [#Part:CMP TallyShop F11]
 	Add:Part:after:CMP TallyShopFeaturesTitle:Qrcodeconfig
@@ -58,6 +68,3 @@
 	
 [System:UDF]
 	globalqrpath:Logical:7895
-	
- 
- 
