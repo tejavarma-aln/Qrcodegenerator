@@ -1,45 +1,48 @@
 # Qrcodegenerator
+
 *********Qr Code Generator for Tally************
 
 
-*Download all the files to the tally application folder
+**GET STARTED**
 
-*Register the Dll with the below Steps
+1) Download all the files to the tally application folder
 
-*load the txt file in Tally 
+2) Register the Dll (Qrcodegenerator.dll) with the below Steps
 
-* Goto f11->Addon Features-> Enable Qr Code : Yes
+3) load the txt file in Tally as normal TDL
 
-* Click on the  Button(Generate Qr Code) in sales voucher to Generate Qr Code and print the invoice
+4) Goto f11->Addon Features-> Enable Qr Code : Yes
+
+5) Click on the  Button(Generate Qr Code) in sales voucher to Generate Qr Code and print the invoice
 
 
-# Steps to Register DLL:
+**Steps to Register DL**
 
 
 1)Copy file (Qrcodegenerator.dll) to C:\Windows\System32
 
 2)Open Cmd in administrator Mode (Elavated mode)
 
-**if you are using 64bit machine** 
+      64bit machine
 
 3)CD C:\Windows\Microsoft.NET\Framework64\v4.0.30319 ;; change directory
 
-**if you are using 32bit machine**
+     32bit machine
 
 3)CD C:\Windows\Microsoft.NET\Framework64\v4.0.30319 ;; change directory
 
-4)Type without quote "regasm Qrcodegenerator.dll /codebase"
+4)Type regasm Qrcodegenerator.dll /codebase  ;; Full path to Qrcodegenerator.dll
 
 5)you will get success message after it registered
 
-you can customise the tdl as per your needs
 
-it requires .Net framework version 4 in order to install this dll and work
+**Requirements**
 
-*Qrcode will be displayed at top left of the invoice
+1).Net Framework Version 4.x.x
+  
+ You can Download from here : https://dotnet.microsoft.com/download/dotnet-framework/net40
 
-*customize the tdl as per you need
 
-**** Make sure all the files placed in Tally Working Directory
+**Qrcode will be displayed at top left of the invoice**
 
 Thanks..
