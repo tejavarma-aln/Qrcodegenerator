@@ -9,7 +9,7 @@
 
 2) Register the Dll (Qrcodegenerator.dll) with the below Steps
 
-3) load the txt file in Tally as normal TDL
+3) load the txt file (Qrcode.txt) in Tally as normal TDL
 
 4) Goto f11->Addon Features-> Enable Qr Code : Yes
 
