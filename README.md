@@ -36,6 +36,13 @@
 5)you will get success message after it registered
 
 
+**Working**
+
+1)When you click on GENERATE QR CODE button it will generate QrCode and Save it as Image in its Working Directory
+
+2)So Make Sure you place all the files in the tally Directory or change the image path in TDL if you place them somewhere
+
+
 **Requirements**
 
 1).Net Framework Version 4.x.x
