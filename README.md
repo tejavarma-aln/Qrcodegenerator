@@ -2,6 +2,8 @@
 
 *********Qr Code Generator for Tally************
 
+**Check out source code here - https://github.com/tejavarma-aln/Qrcodegenerator/tree/master/Sources**
+
 
 **GET STARTED**
 
